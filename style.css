@@ -386,7 +386,7 @@ footer li {
   line-height: 0;
 }
 
-@keyframes rotating{
+@keyframes rotating {
   from {
     transform: rotate(0);
   }
@@ -474,7 +474,7 @@ footer li {
 }
 
 /* mobile phone */
-@media (max-width: 576px) {
+@media (max-width: 480px) {
   html {
     font-size: 60%;
   }
