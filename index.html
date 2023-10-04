@@ -441,25 +441,17 @@
     </script>
 
     <script>
-      // const hamburger = document.querySelector('.navbar-toggler');
-      const stickyTop = document.querySelector('.sticky-top');
-      const offcanvas = document.querySelector('.offcanvas');
+      document.addEventListener('DOMContentLoaded', function () {
+        const stickyTop = document.querySelector('.sticky-top');
+        const offcanvas = document.querySelector('.offcanvas');
 
-      // hamburger.addEventListener('click', function () {
-      //   stickyTop.style.overflow = 'visible';
-      // });
+        offcanvas.addEventListener('show.bs.offcanvas', function () {
+          stickyTop.style.overflow = 'visible';
+        });
 
-      // const btnClose = document.querySelector('.btn-close');
-      // btnClose.addEventListener('click', function () {
-      //   stickyTop.style.overflow = 'hidden';
-      // });
-
-      offcanvas.addEventListener('show.bs.offcanvas', function () {
-        stickyTop.style.overflow = 'visible';
-      });
-
-      offcanvas.addEventListener('hidden.bs.offcanvas', function () {
-        stickyTop.style.overflow = 'hidden';
+        offcanvas.addEventListener('hidden.bs.offcanvas', function () {
+          stickyTop.style.overflow = 'hidden';
+        });
       });
     </script>
 
