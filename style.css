@@ -81,8 +81,8 @@ body {
 }
 
 .navbar-nav .nav-link.active {
-  font-weight: bold; 
-  color: #ff9900; 
+  /* font-weight: bold;  */
+  color: var(--pink); 
 }
 
 .home {
