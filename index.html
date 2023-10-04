@@ -28,7 +28,7 @@
       </main>
     </section>
 
-    <nav class="navbar navbar-expand-md bg-transparent sticky-top mynavbar">
+    <!-- <nav class="navbar navbar-expand-md bg-transparent sticky-top mynavbar">
       <div class="container">
         <a class="navbar-brand" href="#">Ussop Wedding</a>
         <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
@@ -50,6 +50,31 @@
               <a class="nav-link" href="#gifts">Gifts</a>
             </div>
           </div>
+        </div>
+      </div>
+    </nav> -->
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-primary shadow-sm sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">Gabriel Rolly Davinsi</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item ms-3">
+              <a class="nav-link active" aria-current="page" href="#home">Home</a>
+            </li>
+            <li class="nav-item ms-3">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item ms-3">
+              <a class="nav-link" href="#projects">Projects</a>
+            </li>
+            <li class="nav-item ms-3">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
         </div>
       </div>
     </nav>
@@ -441,17 +466,15 @@
     </script>
 
     <script>
-      document.addEventListener('DOMContentLoaded', function () {
-        const stickyTop = document.querySelector('.sticky-top');
-        const offcanvas = document.querySelector('.offcanvas');
+      const stickyTop = document.querySelector('.sticky-top');
+      const offcanvas = document.querySelector('.offcanvas');
 
-        offcanvas.addEventListener('show.bs.offcanvas', function () {
-          stickyTop.style.overflow = 'visible';
-        });
+      offcanvas.addEventListener('show.bs.offcanvas', function () {
+        stickyTop.style.overflow = 'visible';
+      });
 
-        offcanvas.addEventListener('hidden.bs.offcanvas', function () {
-          stickyTop.style.overflow = 'hidden';
-        });
+      offcanvas.addEventListener('hidden.bs.offcanvas', function () {
+        stickyTop.style.overflow = 'hidden';
       });
     </script>
 
