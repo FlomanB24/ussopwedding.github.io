@@ -61,7 +61,7 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
+          <ul id="menu" class="navbar-nav ms-auto">
             <li class="nav-item ms-3">
               <a class="nav-link active" aria-current="page" href="#home">Home</a>
             </li>
@@ -485,6 +485,18 @@
     </script>
 
     <script>
+      var menuItems = document.querySelectorAll('.nav-link');
+      menuItems.forEach(function (menuItem) {
+        menuItem.addEventListener('click', function () {
+          var parentDropdown = menuItem.closest('.navbar-collapse');
+          if (parentDropdown.classList.contains('show')) {
+            parentDropdown.classList.remove('show');
+          }
+        });
+      });
+    </script>
+
+    <script>
       const rootElement = document.querySelector(':root');
       const audioIconWrapper = document.querySelector('.audio-icon-wrapper');
       const audioIcon = document.querySelector('.audio-icon-wrapper i');
@@ -505,7 +517,6 @@
       function enableScroll() {
         window.onscroll = function () {};
         rootElement.style.scrollBehavior = 'smooth';
-        // localStorage.setItem('opened', 'true');
         playAudio();
       }
 
@@ -529,10 +540,6 @@
 
         isPlaying = !isPlaying;
       };
-
-      // if (!localStorage.getItem('opened')) {
-      //   disableScroll();
-      // }
 
       disableScroll();
     </script>
@@ -558,11 +565,22 @@
       const urlParams = new URLSearchParams(window.location.search);
       const nama = urlParams.get('n') || '';
       const pronoun = urlParams.get('p') || 'Bapak/Ibu/Saudara/i';
-
       const namaContainer = document.querySelector('.hero h4 span');
-      namaContainer.innerText = `${pronoun} ${nama},`.replace(/ ,$/, ',');
 
+      namaContainer.innerText = `${pronoun} ${nama},`.replace(/ ,$/, ',');
       document.querySelector('#nama').value = nama;
+    </script>
+
+    <script>
+      var menuItems = document.querySelectorAll('#menu .nav-link');
+      menuItems.forEach(function (menuItem) {
+        menuItem.addEventListener('click', function () {
+          menuItems.forEach(function (item) {
+            item.classList.remove('active');
+          });
+          menuItem.classList.add('active');
+        });
+      });
     </script>
   </body>
 </html>

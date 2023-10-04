@@ -80,6 +80,11 @@ body {
   text-transform: uppercase;
 }
 
+.navbar-nav .nav-link.active {
+  font-weight: bold; 
+  color: #ff9900; 
+}
+
 .home {
   background-image: url(img/bg-floral.png);
   background-size: cover;
